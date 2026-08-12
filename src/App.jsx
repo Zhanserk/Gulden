@@ -44,8 +44,7 @@ export default function App() {
             <div className="hero-photo">
               <div 
                 className="ph" 
-                style={{ backgroundImage: "url('/picters/about.jpg')" }}
-                onError={(e) => { e.target.style.backgroundImage = "url('/picters/1.jpg')"; }}
+                style={{ backgroundImage: "url('/photo%20sadika%20main%20stereett/photo_17_2026-08-12_19-11-11.jpg')" }}
               ></div>
             </div>
             <div className="float-card fc-1"><div className="ic">🧸</div>Жеке шкафшалар</div>
@@ -60,8 +59,7 @@ export default function App() {
         <div className="wrap about-grid">
           <div className="about-single-photo-box">
             <img 
-              src="/picters/about.jpg" 
-              onError={(e) => { e.target.src = "/picters/1.jpg"; }} 
+              src="/photo%20sadik%20vnitry/photo_1_2026-08-12_19-11-11.jpg" 
               alt="Гүлден балабақшасы" 
               className="about-single-img" 
             />
@@ -285,21 +283,15 @@ export default function App() {
             <p>Жарық ойын бөлмелері, таза жатын орындары және қауіпсіз аула.</p>
           </div>
           <div className="gal-grid">
-            <div className="g-item g-wide" style={{ backgroundImage: "url('/picters/1.jpg')" }}>
-              <span>Ойын бөлмесі</span>
-            </div>
-            <div className="g-item g-tall" style={{ backgroundImage: "url('/picters/about.jpg')" }}>
-              <span>Жатын бөлмесі</span>
-            </div>
-            <div className="g-item" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541692641319-981cc79ee10a?q=80&w=700&auto=format&fit=crop')" }}>
-              <span>Санитарлық бөлме</span>
-            </div>
-            <div className="g-item" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560785496-3c9d27877182?q=80&w=700&auto=format&fit=crop')" }}>
-              <span>Аула</span>
-            </div>
-            <div className="g-item g-wide" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560932684-5e552e2372da?q=80&w=900&auto=format&fit=crop')" }}>
-              <span>Ойын алаңы</span>
-            </div>
+            {[1, 2, 5, 6, 9, 10, 11, 12, 14, 16].map((num, i) => (
+              <div
+                key={num}
+                className={`g-item ${i === 0 ? 'g-wide' : ''} ${i === 1 ? 'g-tall' : ''}`}
+                style={{ backgroundImage: `url('/photo%20sadik%20vnitry/photo_${num}_2026-08-12_19-11-11.jpg')` }}
+              >
+                <span>Балабақша ішінде</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
