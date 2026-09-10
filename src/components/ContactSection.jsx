@@ -48,7 +48,7 @@ export default function ContactSection() {
               <div className="ic">📞</div>
               <div>
                 <b>Байланыс телефоны:</b>
-                <a href="tel:+77000000000">+7 (700) 000-00-00</a>
+                <a href="tel:+77000000000">+7 (702) 250-25-25</a>
               </div>
             </div>
           </div>
